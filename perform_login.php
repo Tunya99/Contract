@@ -3,7 +3,7 @@
 	$host = 'localhost'; // адрес сервера
 	$dbuser = 'root'; // имя пользователя
 	$dbpassword = ''; // пароль
-	$dbname = 'zacldog'; // имя базы данных
+	$dbname = 'bdcontract'; // имя базы данных
 	$dbarticles = 'Dogovora'; // название таблицы
 	$link = mysqli_connect($host, $dbuser, $dbpassword, $dbname);
 	if (!$link) {

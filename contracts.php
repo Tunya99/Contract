@@ -7,7 +7,7 @@
 <head>
     <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Заключить Договор</title>
+    <title>Добавить Договор</title>
 </head>
 <body>
 </body>
