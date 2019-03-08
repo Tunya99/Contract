@@ -8,13 +8,19 @@ if(!isset($_SESSION['USER'])){
 <html>
 <head>
     <link href="/Contract/css/style.css" rel="stylesheet">
+
 </head>
 <body>
 <div>
     <nav>
         <ul class="topmenu">
             <li><a href="/Contract/home.php">Главная</a></li>
-            <li><a href="">О колледже</a></li>
+            <li><a href="">Клиенты</a>
+                <ul class="submenu">
+                    <li><a href="/Contract/table_client/get_client.php">Посмотреть клиентов</a></li>
+                    <li><a href="/Contract/table_client/add_client.php">Добавить клиента</a> </li>
+                </ul>
+            </li>
             <li><a href="/Contract/contracts.php">Договора</a>
                 <ul class="submenu">
                     <li><a href="/Contract/table_contract/get_contract.php">Посмотреть договора</a></li>
@@ -35,4 +41,6 @@ if(!isset($_SESSION['USER'])){
         </ul>
     </nav>
 </div>
+
 </body>
+</html>

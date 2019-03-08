@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 08 2019 г., 09:26
--- Версия сервера: 10.1.38-MariaDB
--- Версия PHP: 7.3.2
+-- Время создания: Фев 24 2019 г., 12:11
+-- Версия сервера: 10.1.37-MariaDB
+-- Версия PHP: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,37 +25,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `agreements`
---
-
-CREATE TABLE `agreements` (
-  `id` int(11) NOT NULL,
-  `id_client` int(11) NOT NULL,
-  `id_contract` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Структура таблицы `clients`
 --
 
 CREATE TABLE `clients` (
   `id` int(10) NOT NULL,
-  `lastname` varchar(255) NOT NULL,
-  `firstname` varchar(255) NOT NULL,
-  `middlename` varchar(255) NOT NULL,
-  `passport` varchar(255) NOT NULL,
-  `birthday` date NOT NULL,
-  `addres` varchar(255) NOT NULL
+  `NameC` varchar(255) NOT NULL,
+  `SurnameC` varchar(255) NOT NULL,
+  `Dogovor` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `clients`
---
-
-INSERT INTO `clients` (`id`, `lastname`, `firstname`, `middlename`, `passport`, `birthday`, `addres`) VALUES
-(1, 'Ð›Ð¸Ñ‚Ð²Ð¸Ð½', 'ÐÐ½Ð´Ñ€ÐµÐ¹', 'Ð“ÐµÐ½Ð½Ð°Ð´ÑŒÐµÐ²Ð¸Ñ‡', 'Ñ‹Ð²Ð°Ñ„Ñ‹Ð²Ð°', '2019-03-05', 'Ð³. Ð“Ñ€Ð¾Ð´Ð½Ð¾');
 
 -- --------------------------------------------------------
 
@@ -71,14 +49,6 @@ CREATE TABLE `contracts` (
   `date_end` date NOT NULL,
   `file_contract` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `contracts`
---
-
-INSERT INTO `contracts` (`id`, `name`, `number`, `date_start`, `date_end`, `file_contract`) VALUES
-(13, '1', 2, '2019-03-07', '2019-03-08', 'bdcontract.sql'),
-(14, '2', 2, '2019-03-12', '2019-03-15', 'bdcontract.sql');
 
 -- --------------------------------------------------------
 
@@ -104,12 +74,6 @@ INSERT INTO `users` (`id`, `email`, `password`) VALUES
 --
 
 --
--- Индексы таблицы `agreements`
---
-ALTER TABLE `agreements`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Индексы таблицы `clients`
 --
 ALTER TABLE `clients`
@@ -132,22 +96,16 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT для таблицы `agreements`
---
-ALTER TABLE `agreements`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT для таблицы `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `contracts`
 --
 ALTER TABLE `contracts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
