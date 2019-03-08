@@ -27,9 +27,9 @@ if(!isset($_SESSION['USER'])){
                     <li><a href="/Contract/table_contract/add_contract.php">Добавить договор</a></li>
                 </ul>
             </li>
-            <li><a href="">Помощь</a>
+            <li><a href="/Contract/table_agreement/get_agreement.php">Заключенные договора</a>
                 <ul class="submenu">
-                    <li><a href="">Порядок заключения договоров</a></li>
+                    <li><a href="/Contract/table_agreement/add_agreement.php">Заключить договор</a></li>
                 </ul>
             </li>
             <li><a href="">Контакты</a></li>

@@ -3,7 +3,7 @@
 ?>
 <html>
 <head>
-    <title>Клиенты</title>
+    <title>Заключенные договоры</title>
 </head>
 <body>
     <?php include

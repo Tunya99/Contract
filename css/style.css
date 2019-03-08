@@ -109,3 +109,16 @@ td {
 th:first-child, td:first-child {
     text-align: left;
 }
+
+tr.selected td {
+    background-color: red;
+}
+
+tr td:hover {
+    background-color: green;
+}
+
+div.container{
+    width: 80%;
+    display: contents;
+}
